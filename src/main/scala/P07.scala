@@ -4,10 +4,4 @@ object P07 {
     case h :: t => h :: flatten(t)
     case Nil => Nil
   }
-
-  def example = {
-    assert(flatten(List(List(1, 1), 2, List(3, List(5, 8)))) == List(1, 1, 2, 3, 5, 8))
-
-    println("alles gut!")
-  }
 }

@@ -6,12 +6,6 @@ object P09 {
     case (h :: t, Nil) => pack(t, List(h), result)
     case (h :: t, c :: _) if h == c => pack(t, c :: current, result)
     case (h :: t, c :: _) => pack(t, List(h), current :: result)
-    case (Nil, current) => (current :: result).reverse
-  }
-
-  def example = {
-    assert(pack(List('a, 'a, 'a, 'a, 'b, 'c, 'c, 'a, 'a, 'd, 'e, 'e, 'e, 'e)) == List(List('a, 'a, 'a, 'a), List('b), List('c, 'c), List('a, 'a), List('d), List('e, 'e, 'e, 'e)))
-
-    println("alles gut!")
+    case (Nil, current) => P05.reverse(current :: result)
   }
 }
